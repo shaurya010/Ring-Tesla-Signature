@@ -60,8 +60,8 @@ flowchart TD
     B --> D[Timestamp Authority]
     B --> E[Verifier]
     E --> F[End User]
- 
-
+ ```
+```mermaid
 
 function KeyGeneration(λ, a1, a2):
     s, e1, e2 ← Gaussian Distribution
@@ -71,6 +71,8 @@ function KeyGeneration(λ, a1, a2):
     t2 = a2*s + e2 (mod q)
     return (SecretKey = (s,e1,e2), PublicKey = (t1,t2))
 
+    ```
+```mermaid
 function Sign(message µ, a1, a2, s, e1, e2):
     y ← Random sample from Rq
     v1 = a1*y (mod q)
@@ -84,7 +86,9 @@ function Sign(message µ, a1, a2, s, e1, e2):
         Restart
     return (z, c′)
 
+    ```
 
+```mermaid
 
 function Verify(message µ, signature (z,c′), a1, a2, t1, t2):
     c = Encode(c′)
@@ -96,7 +100,7 @@ function Verify(message µ, signature (z,c′), a1, a2, t1, t2):
     else:
         return REJECT
 
-
+```
 
 
 
