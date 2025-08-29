@@ -62,7 +62,10 @@ flowchart TD
     E --> F[End User]
  ```
 
+
+ ##Key Gen
 <code>
+
 function KeyGeneration(λ, a1, a2):
     s, e1, e2 ← Gaussian Distribution
     if CheckE(e1) = 0 or CheckE(e2) = 0:
@@ -73,6 +76,10 @@ function KeyGeneration(λ, a1, a2):
 
 </code>
 
+
+##Sign
+
+<code>
 function Sign(message µ, a1, a2, s, e1, e2):
     y ← Random sample from Rq
     v1 = a1*y (mod q)
@@ -88,7 +95,12 @@ function Sign(message µ, a1, a2, s, e1, e2):
 
     
 
+</code>
 
+
+##Verify
+
+<code>
 
 function Verify(message µ, signature (z,c′), a1, a2, t1, t2):
     c = Encode(c′)
@@ -100,7 +112,7 @@ function Verify(message µ, signature (z,c′), a1, a2, t1, t2):
     else:
         return REJECT
 
-
+</code>
 
 
 
