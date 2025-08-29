@@ -75,7 +75,7 @@ function KeyGeneration(λ, a1, a2):
     return (SecretKey = (s,e1,e2), PublicKey = (t1,t2))
 
 </code>
----
+
 
 ## Sign
 
@@ -95,7 +95,7 @@ function Sign(message µ, a1, a2, s, e1, e2):
 
 </code>
 
----
+
 ## Verify
 
 <code>
