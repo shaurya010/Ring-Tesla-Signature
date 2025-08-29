@@ -61,7 +61,7 @@ flowchart TD
     B --> E[Verifier]
     E --> F[End User]
  ```
----
+
 
  ## Key Gen
 <code>
@@ -92,8 +92,6 @@ function Sign(message µ, a1, a2, s, e1, e2):
     if rejection check fails:
         Restart
     return (z, c′)
-
-    
 
 </code>
 
