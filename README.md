@@ -51,6 +51,7 @@ The architecture of the **Code Signing System (CSS)** includes:
 4. **Verifier** – Confirms signature validity before execution  
 5. **Trust Anchors** – Root public keys securely stored for verification  
 
+``mermaid
 
 flowchart TD
     A[Developer] --> B[Code Signing System]
@@ -94,5 +95,13 @@ function Verify(message µ, signature (z,c′), a1, a2, t1, t2):
         return ACCEPT
     else:
         return REJECT
+
+
+
+| Message Size | KeyGen (ms) | Sign (ms)   | Verify (ms) | Failures |
+| ------------ | ----------- | ----------- | ----------- | -------- |
+| 500 KB       | 0.008       | 24.66–39.50 | 6.99–14.33  | 20–29    |
+| 1000 KB      | 0.007–0.008 | 23.53–42.53 | 6.96–13.67  | 23–26    |
+| 1500 KB      | 0.008–0.009 | 25.85–34.64 | 7.13–13.68  | 19–32    |
 
 
