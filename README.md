@@ -61,9 +61,9 @@ flowchart TD
     B --> E[Verifier]
     E --> F[End User]
  ```
+---
 
-
- ##Key Gen
+ ## Key Gen
 <code>
 
 function KeyGeneration(λ, a1, a2):
@@ -75,9 +75,9 @@ function KeyGeneration(λ, a1, a2):
     return (SecretKey = (s,e1,e2), PublicKey = (t1,t2))
 
 </code>
+---
 
-
-##Sign
+## Sign
 
 <code>
 function Sign(message µ, a1, a2, s, e1, e2):
@@ -97,8 +97,8 @@ function Sign(message µ, a1, a2, s, e1, e2):
 
 </code>
 
-
-##Verify
+---
+## Verify
 
 <code>
 
