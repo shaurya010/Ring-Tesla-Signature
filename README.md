@@ -51,7 +51,7 @@ The architecture of the **Code Signing System (CSS)** includes:
 4. **Verifier** – Confirms signature validity before execution  
 5. **Trust Anchors** – Root public keys securely stored for verification  
 
-```mermaid
+
 flowchart TD
     A[Developer] --> B[Code Signing System]
     B --> C[Certification Authority]
