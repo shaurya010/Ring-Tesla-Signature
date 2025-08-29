@@ -51,15 +51,16 @@ The architecture of the **Code Signing System (CSS)** includes:
 4. **Verifier** – Confirms signature validity before execution  
 5. **Trust Anchors** – Root public keys securely stored for verification  
 
-``mermaid
+## ⚙️ System Architecture  
 
+```mermaid
 flowchart TD
     A[Developer] --> B[Code Signing System]
     B --> C[Certification Authority]
     B --> D[Timestamp Authority]
     B --> E[Verifier]
     E --> F[End User]
-
+ 
 
 
 function KeyGeneration(λ, a1, a2):
@@ -69,8 +70,6 @@ function KeyGeneration(λ, a1, a2):
     t1 = a1*s + e1 (mod q)
     t2 = a2*s + e2 (mod q)
     return (SecretKey = (s,e1,e2), PublicKey = (t1,t2))
-
-
 
 function Sign(message µ, a1, a2, s, e1, e2):
     y ← Random sample from Rq
@@ -86,6 +85,7 @@ function Sign(message µ, a1, a2, s, e1, e2):
     return (z, c′)
 
 
+
 function Verify(message µ, signature (z,c′), a1, a2, t1, t2):
     c = Encode(c′)
     w1 = a1*z - t1*c (mod q)
@@ -95,6 +95,8 @@ function Verify(message µ, signature (z,c′), a1, a2, t1, t2):
         return ACCEPT
     else:
         return REJECT
+
+
 
 
 
